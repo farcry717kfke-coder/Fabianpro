@@ -1,0 +1,19 @@
+EXPECTED_BAKE_TIME= 20
+
+def bake_time_remaining(elapsed_bake_time) -> int:
+    return EXPECTED_BAKE_TIME - elapsed_bake_time
+
+def preparation_time_in_minutes(capas_de_la_tortilla) -> int:
+    MINUTO_POR_CAPA = 2
+    return MINUTO_POR_CAPA * capas_de_la_tortilla
+    
+def elapsed_time_in_minutes(capas_de_la_tortilla, tiempo_horneado_transcurrido) -> int: 
+    tiempodepreparacion= preparation_time_in_minutes(capas_de_la_tortilla)
+    return tiempodepreparacion + tiempo_horneado_transcurrido
+    
+
+hola = bake_time_remaining(19)
+
+holi = preparation_time_in_minutes(5)
+
+hello = elapsed_time_in_minutes(5, 19)
